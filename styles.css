@@ -1,0 +1,170 @@
+:root {
+  --purple-100: hsl(260, 80%, 90%);
+  --purple-500: hsl(260, 70%, 50%);
+  --yellow-100: hsl(45, 100%, 90%);
+  --yellow-500: hsl(45, 100%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 10%);
+  --font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+}
+
+.grid-container {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "hero hero hero hero"
+    "create create schedule schedule"
+    "ai manage manage optimize"
+    "audience audience grow grow";
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.grid-item.hero {
+  grid-area: hero;
+}
+
+.grid-item.create {
+  grid-area: create;
+}
+
+.grid-item.schedule {
+  grid-area: schedule;
+}
+
+.grid-item.ai {
+  grid-area: ai;
+}
+
+.grid-item.manage {
+  grid-area: manage;
+}
+
+.grid-item.optimize {
+  grid-area: optimize;
+}
+
+.grid-item.audience {
+  grid-area: audience;
+}
+
+.grid-item.grow {
+  grid-area: grow;
+}
+
+.hero {
+  background-color: var(--purple-500);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.create {
+  background-color: var(--yellow-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.manage {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  color: var(--black);
+}
+
+.schedule {
+  background-color: var(--yellow-500);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.write {
+  grid-area: write;
+  background-color: var(--yellow-500);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.growth {
+  grid-area: growth;
+  background-color: var(--purple-500);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.grid-item.optimize {
+  background-color: var(--purple-100);
+  color: var(--black);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.grow {
+  background-color: var(--purple-500);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  color: var(--black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.growth {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.grid-item.ai {
+  background-color: var(--yellow-500); 
+  color: var(--black);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.grid-item.audience {
+  background-color: var(--white); 
+  color: var(--black);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "create"
+      "manage"
+      "schedule"
+      "write"
+      "growth"
+      "grow";
+  }
+
+  .grid-item {
+    padding: 1rem;
+  }
+}
